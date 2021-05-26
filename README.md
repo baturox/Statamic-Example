@@ -7,7 +7,7 @@
 ## Installation
 
 
-Docker requires [Docker](https://www.docker.com/)  to run.
+Requires [Docker](https://www.docker.com/)  to run.
 
 Install the containers and start the server.
 
