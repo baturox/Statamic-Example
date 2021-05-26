@@ -1,0 +1,54 @@
+<header class="masthead" style="background-image: url('/site/themes/moose/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>{{ pageTitle}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            {{ collection:Article limit="10" paginate="true" as="posts" }}
+            {{ posts }}
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="blog/{{slug}}"><h2 class="post-title">{{ title }}</h2></a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">{{ user:profile id=author }}
+                        <a href="#!" class="name">
+                            {{ first_name }} {{ last_name }}</a>
+                        {{ /user:profile }}</a>
+                    on {{ date }}
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4"/>
+            <!-- Post preview-->
+            {{ /posts }}
+
+            {{ paginate }}
+            <div class="paginations" style="display: flex;flex-direction: row">
+                <div class="d-flex justify-content-end mb-4">
+                    <a class="btn btn-primary text-uppercase" href="{{ prev_page }}">Newest Posts</a>
+                </div>
+
+                <div class="d-flex justify-content-end mb-4 ml-1" style="margin-left: 10px">
+                    <a class="btn btn-primary text-uppercase" href="{{ next_page }}">Older Posts</a>
+                </div>
+            </div>
+
+
+            {{ /paginate }}
+
+            {{ /collection:Article }}
+
+
+        </div>
+    </div>
+</div>

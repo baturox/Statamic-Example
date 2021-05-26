@@ -1,0 +1,10 @@
+routes:
+  /:
+    template: home
+    title: 'Make It Simple'
+    pageTitle: 'Make It Simple'
+  /contact:
+    template: contact
+collections:
+  Article: /blog/{slug}
+taxonomies: { }

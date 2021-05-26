@@ -1,0 +1,19 @@
+title: Contact
+fields:
+  name:
+    display: Name
+    validate: required
+  email:
+    display: Email
+    validate: required
+  phone:
+    display: Phone
+    validate: required
+  message:
+    display: Message
+    validate: required
+columns:
+  - name
+  - email
+  - phone
+  - message

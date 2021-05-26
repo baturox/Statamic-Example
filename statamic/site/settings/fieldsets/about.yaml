@@ -1,0 +1,24 @@
+title: About
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Name
+        type: text
+        localizable: true
+      about:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        display: About
+      poster:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Poster
+      template:
+        type: template
+        display: Template
+taxonomies: true

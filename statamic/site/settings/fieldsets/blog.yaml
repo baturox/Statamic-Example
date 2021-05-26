@@ -1,0 +1,24 @@
+title: Blog
+sections:
+  main:
+    display: Main
+    fields:
+      content:
+        display: Content
+        type: markdown
+        instructions: 'Think Simple'
+        validate: required
+      author:
+        display: Author
+        type: users
+        default: current
+        max_items: 1
+        label: '{{ first_name }} {{ last_name }}'
+      poster:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Poster
+taxonomies: true
